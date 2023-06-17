@@ -7,8 +7,8 @@ Below is an example config that monitors routes 10.1.1.0/30 used by VNI 10 and 1
 <pre>
 ops
  script-assistant python change_vtep_on_route_change.py
- environment changevtep_targets0 monitor_net=10.1.1.0;vni=10;add=10.1.1.1;remove=10.100.100.1
- environment changevtep_targets1 monitor_net=10.2.3.0;vni=20;add=10.2.3.1;remove=10.200.200.1
+ environment changevtep_targets0 vni=10;monitor_net=10.1.1.0;add=10.1.1.1;remove=10.100.100.1
+ environment changevtep_targets1 vni=20;monitor_net=10.2.3.0;add=10.2.3.1;remove=10.200.200.1
 </pre>
 
 Multiple targets can also be specified in the same environment variable using / separator.
