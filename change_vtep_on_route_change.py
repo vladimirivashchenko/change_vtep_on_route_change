@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-# (C) 2023 Vladimir Ivashchenko v@ivashchenko.org
+# (C) 2023 Vladimir Ivashchenko v@ivashchenko.org https://www.hazard.maks.net
 import ops
 import sys
 import os
