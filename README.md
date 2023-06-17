@@ -2,7 +2,7 @@ change_vtep_on_route_change is a Huawei OPS Python script that changes VTEP peer
 
 The script is configured using up to 100 changevtep_targetsN environment variables. 
 
-Example config that monitors add/remove events for route 10.1.1.0/30 used by VNI 10 and 10.2.3.0/30 used by VNI 20 and configures specified VTEPs in case route gets added or removed from the routing table:
+Below is an example config that monitors routes 10.1.1.0/30 used by VNI 10 and 10.2.3.0/30 used by VNI 20 (note that /30 prefix size is implied). When these routes will get added or removed from the routing table the script will configure VNIs under Nve1 interface with specified VTEPs.
 
 <pre>
 ops
