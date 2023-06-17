@@ -29,9 +29,6 @@ def ops_condition(_ops):
                 i = i + 1
                 d = dict(x.split("=") for x in target.split(";"))
 
-                #for k, v in d.items():
-                #   print(k, v)
-
                 status, err_log = _ops.syslog("Monitoring target route " + d["net"] + " for VNI " + d["vni"], ops.INFORMATIONAL, ops.SYSLOG);
 
                 if d["net"] not in known_routes:
