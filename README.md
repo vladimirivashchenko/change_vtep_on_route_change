@@ -1,4 +1,4 @@
-(C) Vladimir Ivashchenko 2023 http://www.hazard.maks.net CC0 license
+(C) Vladimir Ivashchenko 2023 v@ivashchenko.org https://www.hazard.maks.net CC0 license
 
 change_vtep_on_route_change is a Huawei OPS Python script that changes VTEP peer IP in case route to primary VTEP goes down. Tested on CloudEngine CE6800 switches.
 
