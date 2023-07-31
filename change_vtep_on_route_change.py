@@ -32,14 +32,14 @@ def ops_condition(_ops):
                 status, err_log = _ops.syslog("Monitoring target route " + d["net"] + " for VNI " + d["vni"], ops.INFORMATIONAL, ops.SYSLOG);
 
                 if d["net"] not in known_routes:
-                        value, err_str = _ops.route.subscribe("changevtep" + str(i), d["net"], 30)
+                        value, err_str = _ops.route.subscribe("chgvtep" + str(i), d["net"], 30)
                         if 'OK' not in err_str:
                                 status, err_log = _ops.syslog("!! Failed to monitor target route " + d["net"] + ": " + err_str, ops.INFORMATIONAL, ops.SYSLOG);
                         else:
                                 known_routes[d["net"]] = 1
                                 if opscorrelate is not "":
                                         opscorrelate = opscorrelate + " or "
-                                opscorrelate = opscorrelate + "changevtep" + str(i)
+                                opscorrelate = opscorrelate + "chgvtep" + str(i)
 
         status, err_log = _ops.syslog("Finished startup process", ops.INFORMATIONAL, ops.SYSLOG);
 
